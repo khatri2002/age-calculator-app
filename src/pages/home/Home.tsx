@@ -31,7 +31,10 @@ const Home = () => {
     const dateString = `${year}-${month}-${day}`;
     if (!moment(dateString, "YYYY-MM-DD").isValid()) {
       fields.forEach((field) => {
-        setError(field.key, { type: "invalid-date" });
+        setError(field.key, {
+          type: "invalid-date",
+          message: field.key === "day" ? "Must be a valid day" : "",
+        });
       });
       setAge(DEFAULT_AGE);
       return;
