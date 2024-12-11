@@ -1,0 +1,78 @@
+.main {
+  @apply bg-off-white flex min-h-screen items-center justify-center p-4;
+
+  .box {
+    @apply rounded-3xl bg-white p-6 py-10 sm:p-12;
+    border-bottom-right-radius: 8rem;
+    width: 47rem;
+
+    @media screen and (width < 640px) {
+      border-bottom-right-radius: 7rem;
+    }
+
+    .fieldsContainer {
+      @apply flex justify-between gap-x-6 sm:justify-start sm:gap-0;
+
+      .item {
+        @apply flex flex-col gap-y-1 sm:gap-y-2;
+
+        label {
+          @apply text-smokey-grey text-xs font-semibold uppercase transition sm:text-sm;
+          letter-spacing: 0.2rem;
+        }
+
+        input {
+          @apply border-light-grey hover:border-purple focus-within:border-purple w-full cursor-pointer rounded border p-2 text-xl font-bold outline-none transition sm:w-36 sm:p-4 sm:text-3xl;
+        }
+
+        .errorText {
+          @apply text-light-red invisible min-h-5 text-xs italic opacity-0 transition sm:min-w-44 sm:text-sm;
+        }
+
+        &.error {
+          label {
+            @apply text-light-red;
+          }
+
+          input {
+            @apply border-light-red;
+          }
+
+          .errorText {
+            @apply visible opacity-100;
+          }
+        }
+      }
+    }
+
+    .btnContainer {
+      @apply relative min-h-32 sm:min-h-24;
+
+      .line {
+        @apply bg-light-grey absolute bottom-0 top-0 my-auto w-full;
+        height: 2px;
+      }
+
+      .btn {
+        @apply bg-purple hover:bg-off-black absolute bottom-0 left-0 right-0 top-0 mx-auto my-auto h-14 w-14 rounded-full transition sm:left-auto sm:h-20 sm:w-20;
+
+        img {
+          @apply m-auto w-6 sm:w-auto;
+        }
+      }
+    }
+
+    .valuesContainer {
+      @apply space-y-2 text-5xl font-bold italic sm:text-8xl;
+
+      .item {
+        .value {
+          @apply text-purple;
+        }
+        .label {
+          @apply text-off-black ml-2;
+        }
+      }
+    }
+  }
+}
