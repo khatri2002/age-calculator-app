@@ -1,6 +1,10 @@
 .main {
   @apply bg-off-white flex min-h-screen items-center justify-center p-4;
 
+  .header {
+    @apply hidden;
+  }
+
   .box {
     @apply rounded-3xl bg-white p-6 py-10 sm:p-12;
     border-bottom-right-radius: 8rem;

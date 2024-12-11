@@ -63,6 +63,7 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
+      <h1 className={styles.header}>Age Calculator App</h1>
       <div className={styles.box}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.fieldsContainer}>
